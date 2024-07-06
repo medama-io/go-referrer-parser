@@ -38,5 +38,13 @@ func (p *Parser) Parse(domain string) string {
 	if name, ok := p.referrers[domain]; ok {
 		return name
 	}
+
+	// Check for a match stripping the leading "www."
+	if strings.HasPrefix(domain, "www.") {
+		if name, ok := p.referrers[domain[4:]]; ok {
+			return name
+		}
+	}
+
 	return ""
 }
