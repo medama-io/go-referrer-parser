@@ -7,6 +7,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"slices"
+	"strings"
 )
 
 const (
@@ -45,8 +47,7 @@ func convertToCSV() {
 	}
 	defer f.Close()
 
-	d := csv.NewWriter(f)
-	defer d.Flush()
+	var records [][]string
 
 	// e.g. unknown, search, social, email, paid
 	for group, groupValue := range data {
@@ -54,8 +55,30 @@ func convertToCSV() {
 		for name, nameValue := range groupValue.(map[string]interface{}) {
 			for _, domain := range nameValue.(map[string]interface{})["domains"].([]interface{}) {
 				// Write a new row to referers.csv.
-				d.Write([]string{group, name, domain.(string)})
+				records = append(records, []string{group, name, domain.(string)})
 			}
+		}
+	}
+
+	// Sort records
+	slices.SortFunc(records, func(a, b []string) int {
+		// Sort by group, then name, then domain
+		if a[0] == b[0] {
+			if a[1] == b[1] {
+				return strings.Compare(a[2], b[2])
+			}
+			return strings.Compare(a[1], b[1])
+		}
+		return strings.Compare(a[0], b[0])
+	})
+
+	// Write sorted records to CSV
+	d := csv.NewWriter(f)
+	defer d.Flush()
+
+	for _, record := range records {
+		if err := d.Write(record); err != nil {
+			log.Fatal(err)
 		}
 	}
 }
