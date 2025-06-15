@@ -19,10 +19,10 @@ const (
 	CSV_FILE_PATH = "./data/referers.csv"
 )
 
-var data map[string]interface{} = make(map[string]interface{})
+var groupData map[string]any = make(map[string]any)
 
 // Fetch dataset from https://github.com/snowplow-referer-parser/referer-parser
-func getData() {
+func getGroupData() {
 	resp, err := http.Get(SOURCE_URL)
 	if err != nil {
 		log.Fatal(err)
@@ -34,7 +34,7 @@ func getData() {
 		log.Fatal(err)
 	}
 
-	err = json.Unmarshal(body, &data)
+	err = json.Unmarshal(body, &groupData)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -50,10 +50,10 @@ func convertToCSV() {
 	var records [][]string
 
 	// e.g. unknown, search, social, email, paid
-	for group, groupValue := range data {
+	for group, groupValue := range groupData {
 		// e.g. Google, Yandex Maps, Yahoo!
-		for name, nameValue := range groupValue.(map[string]interface{}) {
-			for _, domain := range nameValue.(map[string]interface{})["domains"].([]interface{}) {
+		for name, nameValue := range groupValue.(map[string]any) {
+			for _, domain := range nameValue.(map[string]any)["domains"].([]any) {
 				// Write a new row to referers.csv.
 				records = append(records, []string{group, name, domain.(string)})
 			}
@@ -81,9 +81,40 @@ func convertToCSV() {
 			log.Fatal(err)
 		}
 	}
+
+	log.Printf("CSV file written to %s\n", CSV_FILE_PATH)
+}
+
+// Fetch list from Matomo's referrer spam list.
+func writeSpamList() {
+	resp, err := http.Get("https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	file, err := os.Create("./data/spammers.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	_, err = file.Write(body)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Spam list written to ./data/spammers.txt")
 }
 
 func main() {
-	getData()
+	getGroupData()
 	convertToCSV()
+
+	writeSpamList()
 }
