@@ -1,0 +1,14 @@
+[tools]
+go = "1.22"
+
+[tasks.test]
+run = "go test ./..."
+
+[tasks.bench]
+run = "go test -bench=. ./..."
+
+[tasks.generate]
+run = "go run ./scripts/main.go"
+
+[tasks.deps]
+run = "go get -u ./..."

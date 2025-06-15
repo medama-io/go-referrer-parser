@@ -1,5 +1,6 @@
 email,126 Mail,mail.126.com
 email,163 Mail,mail.163.com
+email,1und1,deref-1und1-02.de
 email,2degrees,webmail.2degreesbroadband.co.nz
 email,AOL Mail,com.aol.mobile.aolapp
 email,AOL Mail,mail.aol.com
@@ -9,16 +10,59 @@ email,Bigpond,basic.messaging.bigpond.com
 email,Bigpond,email.telstra.com
 email,Bigpond,webmail.bigpond.com
 email,Bigpond,webmail2.bigpond.com
+email,Bluewin,email.bluewin.ch
+email,Bluewin,rich-v01.bluewin.ch
+email,Bluewin,rich-v02.bluewin.ch
 email,Commander,webmail.commander.net.au
 email,Daum Mail,mail.daum.net
 email,Daum Mail,mail2.daum.net
 email,Dodo,webmail.dodo.com.au
 email,E1.ru,mail.e1.ru
 email,Freenet,webmail.freenet.de
+email,GMX,deref-gmx.at
+email,GMX,deref-gmx.ch
+email,GMX,deref-gmx.co.uk
+email,GMX,deref-gmx.com
+email,GMX,deref-gmx.de
+email,GMX,deref-gmx.es
+email,GMX,deref-gmx.fr
+email,GMX,deref-gmx.it
+email,GMX,deref-gmx.net
+email,GMX,lightmailer-bap.gmx.net
+email,GMX,lightmailer-bs.gmx.net
+email,GMX,lightmailer.gmx.at
+email,GMX,lightmailer.gmx.ch
+email,GMX,lightmailer.gmx.co.uk
+email,GMX,lightmailer.gmx.com
+email,GMX,lightmailer.gmx.de
+email,GMX,lightmailer.gmx.es
+email,GMX,lightmailer.gmx.fr
+email,GMX,lightmailer.gmx.it
+email,GMX,lightmailer.gmx.net
 email,Gmail,com.google.android.gm
 email,Gmail,inbox.google.com
 email,Gmail,mail.google.com
 email,Inbox.com,inbox.com
+email,Infomaniak,mail.infomaniak.com
+email,Ionos,email.ionos.ca
+email,Ionos,email.ionos.co.uk
+email,Ionos,email.ionos.com
+email,Ionos,email.ionos.de
+email,Ionos,email.ionos.es
+email,Ionos,email.ionos.fr
+email,Ionos,email.ionos.it
+email,Ionos,email.ionos.mx
+email,Ionos,mailbusiness.ionos.ca
+email,Ionos,mailbusiness.ionos.co.uk
+email,Ionos,mailbusiness.ionos.com
+email,Ionos,mailbusiness.ionos.de
+email,Ionos,mailbusiness.ionos.es
+email,Ionos,mailbusiness.ionos.fr
+email,Ionos,mailbusiness.ionos.it
+email,Ionos,mailbusiness.ionos.mx
+email,Mail.com,3c-lxa.mail.com
+email,Mail.com,deref-mail.com
+email,Mail.com,lightmailer.mail.com
 email,Mail.ru,e.mail.ru
 email,Mail.ru,touch.mail.ru
 email,Mailchimp,com.mailchimp.mailchimp
@@ -29,19 +73,34 @@ email,Naver Mail,mail.naver.com
 email,Netspace,webmail.netspace.net.au
 email,Optus Zoo,webmail.optusnet.com.au
 email,Optus Zoo,webmail.optuszoo.com.au
+email,Orange Webmail,mail01.orange.fr
+email,Orange Webmail,mail02.orange.fr
+email,Orange Webmail,messagerie.orange.fr
+email,Orange Webmail,messageriepro3.orange.fr
 email,Orange Webmail,orange.fr/webmail
+email,Orange Webmail,wmail.orange.fr
 email,Outlook.com,com.microsoft.office.outlook
 email,Outlook.com,mail.live.com
 email,Outlook.com,outlook.live.com
+email,Proton,mail.proton.me
 email,QIP,mail.qip.ru
 email,QQ Mail,exmail.qq.com
 email,QQ Mail,mail.qq.com
 email,Rambler,mail.rambler.ru
 email,Seznam Mail,email.seznam.cz
 email,Sibmail,sibmail.com
+email,T-online,email.t-online.de
+email,TIM,webmail.tim.it
+email,UPC,upcmail.hispeed.ch
 email,Ukr.net,mail.ukr.net
 email,Virgin,webmail.virginbroadband.com.au
+email,Vodafone,mail.vodafone.de
 email,Vodafone,webmail.vodafone.co.nz
+email,Web.de,3c-bap.web.de
+email,Web.de,3c.web.de
+email,Web.de,deref-web.de
+email,Web.de,lightmailer-bap.web.de
+email,Web.de,lightmailer-bs.web.de
 email,Westnet,webmail.westnet.com.au
 email,Yahoo! Mail,com.yahoo.mobile.client.android.mail
 email,Yahoo! Mail,mail.yahoo.co.jp
@@ -91,8 +150,13 @@ paid,Fluct,adingo.jp
 paid,Google,googleads.g.doubleclick.net
 paid,Google,googleadservices.com
 paid,Google,imasdk.googleapis.com
+paid,Google,pagead2.googlesyndication.com
 paid,Google,partner.googleadservices.com
+paid,Google,safeframe.googlesyndication.com
+paid,Google,syndicatedsearch.goog
+paid,Google,tdsf.doubleclick.net
 paid,Google,tpc.googlesyndication.com
+paid,Google,www.adsensecustomsearchads.com
 paid,Google,www.googleadservices.com
 paid,Jivox,jivox.com
 paid,LifeStreet,lfstmedia.com
@@ -139,7 +203,7 @@ paid,ZEDO,z1.zedo.com
 paid,ZEDO,zedo.com
 search,1&1,search.1and1.com
 search,1.cz,1.cz
-search,1und1,search.1und1.de
+search,1und1,suche.1und1.de
 search,2gis,2gis.ru
 search,2gis,link.2gis.ru
 search,2gis,www.2gis.ru
@@ -247,6 +311,7 @@ search,Bing Images,www.bing.com/images/search
 search,Blogdigger,www.blogdigger.com
 search,Blogpulse,www.blogpulse.com
 search,Bluewin,search.bluewin.ch
+search,Brave,search.brave.com
 search,British Telecommunications,search.bt.com
 search,Centrum,morfeo.centrum.cz
 search,Centrum,serach.centrum.cz
@@ -1985,7 +2050,7 @@ search,Mamma,www.mamma.com
 search,Marktplaats,www.marktplaats.nl
 search,Maxwebsearch,maxwebsearch.com
 search,Meinestadt,www.meinestadt.de
-search,Meta,meta.ua
+search,Meta.ua,meta.ua
 search,MetaCrawler.de,s1.metacrawler.de
 search,MetaCrawler.de,s2.metacrawler.de
 search,MetaCrawler.de,s3.metacrawler.de
@@ -2294,6 +2359,7 @@ social,LinkedIn,com.linkedin.android
 social,LinkedIn,linkedin.com
 social,LinkedIn,lnkd.in
 social,LiveJournal,livejournal.ru
+social,Lnk.Bio,lnk.bio
 social,Mail.ru,my.mail.ru
 social,Mixi,mixi.jp
 social,MoiKrug.ru,moikrug.ru
@@ -2385,6 +2451,8 @@ social,WhatsApp,com.whatsapp
 social,WhatsApp,web.whatsapp.com
 social,Whirlpool,forums.whirlpool.net.au
 social,Windows Live Spaces,login.live.com
+social,Workplace,l.workplace.com
+social,Workplace,lm.workplace.com
 social,XING,xing.com
 social,Xanga,xanga.com
 social,Youtube,youtu.be
